@@ -9,18 +9,17 @@
    /* 1 */
 
    function AsalNumberFinder(...params){
-        let asalMi ;
-       for (let index = 0; index < params.length; index++) {
-            asalMi = true
+       let asalMi ;
+       for (let index = 0; index < params.length; index++) 
+       {
+            asalMi = true        
+           for (let j = 2; j < params[index] ; j++) 
+           {      
 
-            for (let j = 2; j < params[index] ; j++) {
+                if(params[index]%j == 0 || params[index]==1) asalMi = false;     
 
-                if(params[index]%j == 0 || params[index]==1){
-                    asalMi = false;
-                } 
-                             
-            }  
-           console.log(asalMi)       
+           }  
+          console.log(asalMi)       
        }
     }
     // AsalNumberFinder(1, 67,24, 3,83,89,9)
